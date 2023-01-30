@@ -15,12 +15,12 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ### Screenshot
 
-![](https://github.com/Dejmian11/8-Social-proof-section/blob/master/images/design/Screenshot%20-%20Frontend%20Mentor%20Social%20proof%20section.png)
+![](https://github.com/Dejmian11/9-Four-card-feature-section/blob/master/images/design/Screenshot%20-%20Frontend%20Mentor%20Four%20card%20feature%20section.png)
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/social-proof-section-build-with-sass-vfoTWRJ1_x)
-- Live Site URL: [Live](https://ubiquitous-praline-ee4a7a.netlify.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/four-card-feature-section-build-with-sass-ezhHY8yMdJ)
+- Live Site URL: [Live](https://velvety-douhua-016a29.netlify.app/)
 
 ## My process
 
