@@ -1,0 +1,54 @@
+@use 'base' as *;
+
+.section {
+  padding-block: 5rem;
+
+  &__header {
+    display: grid;
+    gap: 1rem;
+    padding-inline: .2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+
+    @include respond(lg) {
+      padding-inline: 16rem;
+    }
+  }
+}
+
+.wrapper {
+	padding-inline: 2rem;
+	margin-inline: auto;
+
+	@include respond(sm) {
+		max-width: 540px;
+	}
+
+	@include respond(md) {
+		max-width: 720px;
+	}
+
+	@include respond(lg) {
+		max-width: 960px;
+	}
+
+	@include respond(xl) {
+		max-width: 1150px;
+	}
+}
+
+.grid {
+  display: grid;
+  gap: var(--content-spacing, 1rem);
+}
+
+.features-container {
+  --content-spacing: 1.5rem;
+
+  @include respond(lg) {
+    --content-spacing: 2rem;
+
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}

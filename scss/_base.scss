@@ -1,0 +1,191 @@
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+// MIXINS
+@mixin respond($breakpoint) {
+	@if $breakpoint == xs {
+		// < 576px
+		@media only screen and (max-width: 36em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == sm {
+		@media only screen and (min-width: 36em) {
+			// 576px
+			@content;
+		}
+	}
+
+	@if $breakpoint == md {
+		@media only screen and (min-width: 48em) {
+			// 768px
+			@content;
+		}
+	}
+
+	@if $breakpoint == lg {
+		@media only screen and (min-width: 62em) {
+			//  992px
+			@content;
+		}
+	}
+
+	@if $breakpoint == xl {
+		@media only screen and (min-width: 75em) {
+			//  1200px
+			@content;
+		}
+	}
+
+	@if $breakpoint == xxl {
+		@media only screen and (min-width: 87.5em) {
+			//  > 1400px
+			@content;
+		}
+	}
+}
+
+// VARIABLES
+:root {
+	--clr-red-400: hsl(0, 78%, 62%);
+	--clr-cyan-400: hsl(180, 62%, 55%);
+	--clr-orange-400: hsl(34, 97%, 64%);
+	--clr-blue-400: hsl(212, 86%, 64%);
+
+	--clr-neutral-400: hsl(234, 12%, 34%);
+	--clr-neutral-700: hsl(229, 6%, 66%);
+	--clr-neutral-800: hsl(0, 0%, 98%);
+	--clr-neutral-900: hsl(0, 0%, 100%);
+
+	--fs-300: 0.8125rem;
+	--fs-400: 0.9375rem;
+	--fs-600: 1.25rem;
+	--fs-700: 1.5625rem;
+
+  @include respond(lg) {
+    --fs-400: 1rem;
+    --fs-700: 2.3125rem;
+  }
+
+	--fs-body: var(--fs-400);
+	--fs-heading-tertiary: var(--fs-600);
+	--fs-heading-secondary: var(--fs-700);
+
+	--ff-primary: 'Poppins', sans-serif;
+
+	--fw-extra-light: 200;
+	--fw-regular: 400;
+	--fw-semi-bold: 600;
+}
+
+// RESET
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+/* Set core body defaults */
+body {
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video,
+canvas {
+	max-width: 100%;
+	display: block;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+// UTILITIES
+.fw-semi-bold {
+	font-weight: var(--fw-semi-bold);
+}
+
+// GENERAL STYLING
+body {
+	background-color: var(--clr-neutral-800);
+	color: var(--clr-neutral-700);
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	font-weight: var(--fw-regular);
+	line-height: 1.5;
+}
+
+// TYPOGRAPHY
+.heading-secondary,
+.heading-tertiary {
+	color: var(--clr-neutral-400);
+}
+
+.heading-secondary {
+	font-size: var(--fs-heading-secondary);
+	font-weight: var(--fw-extra-light);
+	line-height: 1.4;
+}
+
+.heading-tertiary {
+	font-size: var(--fs-heading-tertiary);
+	font-weight: var(--fw-semi-bold);
+}
